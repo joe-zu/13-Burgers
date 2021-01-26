@@ -14,6 +14,7 @@ const orm = {
       cb(result);
     });
   },
+
   insertOne: (name, cb) => {
     const queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?, false)";
     connection.query(queryString, [name], (err, result) => {

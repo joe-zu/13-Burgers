@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row my-5">
+        <h1 class="text-center">Welcome to Burgerland</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <ul class="list-unstyled">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{>burgers/devour devoured=false}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+
+        </div>
+        <div class="col-4">
+            <img
+                src="https://cdn.dribbble.com/users/13754/screenshots/6830762/cheeseburger-illustration_4x.png?compress=1&resize=1000x750"
+                class="img-fluid"
+                alt="delicious burger">
+            <form id="burgerPostForm">
+                <div class="form-group center">
+                
+                <input type="text" class="form-control" id="newBurger" placeholder="add a new burger...">
+                <button type="submit" class="btn btn-warning my-2">Submit</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-4">
+            <ul class="list-unstyled">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <li>
+                            <div class="alert alert-secondary">
+                                <span class="fw-bold">{{id}}. </span>  {{burger_name}}
+                            </div>
+                        </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+
+        </div>
+    </div>
+</div>
