@@ -12,7 +12,7 @@ else {
     password: "helloWorld",
     database: "burgers_DB"
     });
-}
+
     
   
   
@@ -24,5 +24,5 @@ else {
     }
     console.log("connected as id " + connection.threadId);
   });
-
+}
   module.exports = connection;
