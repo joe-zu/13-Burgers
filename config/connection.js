@@ -11,9 +11,10 @@ else {
     user: "root",
     password: "helloWorld",
     database: "burgers_DB"
+    });
 }
     
-  });
+  
   
   
   connection.connect(function(err) {
